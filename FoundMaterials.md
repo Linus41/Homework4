@@ -15,3 +15,13 @@ function pomodoro(mins) {
    },1000)
 }
 </script> 
+
+<!--  -->
+
+<!-- HTML and script for how to replace text with new text via innerHTML property -->
+<p id="demo" onclick="myFunction()">Click me to change my HTML content (innerHTML).</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed!";
+}

@@ -1,0 +1,30 @@
+container {
+    width: 1000px;
+}
+
+#header {
+    text-align: center;
+    padding: 20px;
+}
+
+#start-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#question {
+    text-align: center;
+    padding: 20px;
+}
+
+#answers {
+    text-align: center;
+    padding: 20px;
+}
+
+ol {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
