@@ -3,6 +3,9 @@
 
 <head>
     <Title>Timed Coding Quiz</Title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -24,11 +27,18 @@
                 <!-- multiple choice answers in a list -->
                 <h1>Question 1</h1>
                 <ol>
-                    <li>Answer 1</li>
-                        <
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
                 </ol>
             </div>
             <!-- Question 2 -->
@@ -36,10 +46,18 @@
                 <!-- multiple choice answers in a list -->
                 <h1>Question 2</h1>
                 <ol>
-                    <li id="correct" type="button" onclick="">Answer 1</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
                 </ol>
             </div>
             <!-- Question 3 -->
@@ -47,10 +65,18 @@
                 <!-- multiple choice answers in a list -->
                 <h1>Question 3</h1>
                 <ol>
-                    <li id="correct" type="button" onclick="">Answer 1</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
                 </ol>
             </div>
             <!-- Question 4 -->
@@ -58,22 +84,32 @@
                 <!-- multiple choice answers in a list -->
                 <h1>Question 4</h1>
                 <ol>
-                    <li id="correct" type="button" onclick="">Answer 1</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
-                    <li id="incorrect" type="button" onclick="">Answer 2</li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
+                    <li>
+                        <button type="button" id="correct" onclick="">Answer 1</button>
+                    </li>
                 </ol>
                 <!-- section for timer -->
                 <section>
-                    <div id="timer">
-                        <h1>Timer</h1>
-                        <p>Soon to feature an actual timer</p>
-                    </div>
-                </section>
+                    <div class="time"></div>
+                    <div id="minutes">4</div>
+                    <div id="seconds">00</div>
+
             </div>
+        </section>
+        </div>
         </section>
 
     </container>
+    <script src="script.js"></script>
 </body>
 
 </html>
