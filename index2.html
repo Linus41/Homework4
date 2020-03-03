@@ -17,7 +17,7 @@
     <!-- start button -->
     <button type="button" onclick="myFunction()">START</button>
 
-    <div onclick="nextQuestion()" id="question-one">
+    <div onclick="firstQuestion()" id="question-one">
         <h1>What is your favorite animal?</h1>
             <ol>
                 <li>
@@ -34,7 +34,7 @@
                 </li>
             </ol>
     </div>
-    <div id="question-two">
+    <div onclick="secondQuestion()"  id="question-two">
         <h1>What is the circumference of the earth?</h1>
         <ol>
             <li>
@@ -50,6 +50,40 @@
                 <button type="button">Unanswerable</button>
             </li>
         </ol>
+    </div>
+    <div onclick="thirdQuestion()" id="question-three">
+        <h1>What is your favorite car?</h1>
+            <ol>
+                <li>
+                    <button type="button">Volkswagen</button>
+                </li>
+                <li>
+                    <button type="button">Tesla</button>
+                </li>
+                <li>
+                    <button type="button">Bike</button>
+                </li>
+                <li>
+                    <button type="button">Ford F-150</button>
+                </li>
+            </ol>
+    </div>
+    <div onclick="fourthQuestion()" id="question-four">
+        <h1>What is your favorite style of house?</h1>
+            <ol>
+                <li>
+                    <button type="button">Tudor</button>
+                </li>
+                <li>
+                    <button type="button">Greek Revival</button>
+                </li>
+                <li>
+                    <button type="button">Shack</button>
+                </li>
+                <li>
+                    <button type="button">Kangaroo</button>
+                </li>
+            </ol>
     </div>
     <script src="script2.js"></script>
 </body>
