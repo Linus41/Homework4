@@ -40,3 +40,9 @@ function thirdQuestion() {
         document.getElementById("question-four").style.display = "block";
     }
 }
+function scoreKeep() {
+    var correct = document.getElementsByClassName("correct");
+    if(correct) {
+        
+    }
+}
