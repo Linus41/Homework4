@@ -15,9 +15,42 @@
         <h1>Welcome to a Timed Coding Quiz! <br> Good luck!</h1>
     </header>
     <!-- start button -->
-    <button type="button" onclick="myFunction()">Click Me</button>
+    <button type="button" onclick="myFunction()">START</button>
 
-    <div id="question">This is where the question goes</div>
+    <div onclick="nextQuestion()" id="question-one">
+        <h1>What is your favorite animal?</h1>
+            <ol>
+                <li>
+                    <button type="button">Dog</button>
+                </li>
+                <li>
+                    <button type="button">Cat</button>
+                </li>
+                <li>
+                    <button type="button">Fish</button>
+                </li>
+                <li>
+                    <button type="button">Kangaroo</button>
+                </li>
+            </ol>
+    </div>
+    <div id="question-two">
+        <h1>What is the circumference of the earth?</h1>
+        <ol>
+            <li>
+                <button type="button">Two Miles</button>
+            </li>
+            <li>
+                <button type="button">A bajillion miles</button>
+            </li>
+            <li>
+                <button type="button">Infinity</button>
+            </li>
+            <li>
+                <button type="button">Unanswerable</button>
+            </li>
+        </ol>
+    </div>
     <script src="script2.js"></script>
 </body>
 

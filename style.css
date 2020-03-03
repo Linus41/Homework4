@@ -12,7 +12,7 @@ container {
     padding: 20px;
 }
 
-#question {
+#question-one, #question-two {
     text-align: center;
     padding: 20px;
 }
