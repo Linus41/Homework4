@@ -19,13 +19,14 @@
         <h1>Welcome to a Timed Coding Quiz! <br> Good luck!</h1>
     </header>
     <!-- start button -->
-    <button id="button" type="button" onclick="myFunction()">START</button>
-
+    <div id="button">
+        <button id="button" type="button" onclick="myFunction()">START</button>
+    </div>
     <div onclick="firstQuestion()" id="question-one">
         <h1>What is your favorite animal?</h1>
         <ol>
             <li>
-                <button class="correct" type="button">Dog</button>
+                <button onclick="correct()" class="correct" type="button">Dog</button>
             </li>
             <li>
                 <button type="button">Cat</button>
@@ -45,7 +46,7 @@
                 <button type="button">Two Miles</button>
             </li>
             <li>
-                <button class="correct" type="button">A bajillion miles</button>
+                <button onclick="correct()" class="correct" type="button">A bajillion miles</button>
             </li>
             <li>
                 <button type="button">Infinity</button>
@@ -62,7 +63,7 @@
                 <button type="button">Volkswagen</button>
             </li>
             <li>
-                <button class="correct" type="button">Tesla</button>
+                <button onclick="correct()" class="correct" type="button">Tesla</button>
             </li>
             <li>
                 <button type="button">Bike</button>
@@ -85,7 +86,7 @@
                 <button type="button">Shack</button>
             </li>
             <li>
-                <button class="correct" type="button">Underground</button>
+                <button onclick="correct()" class="correct" type="button">Underground</button>
             </li>
         </ol>
 
