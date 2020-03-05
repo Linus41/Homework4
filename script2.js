@@ -5,7 +5,7 @@ document.getElementById("question-three").style.display = "none";
 document.getElementById("question-four").style.display = "none";
 
 
-
+document.getElementById("score").style.display = "none";
 
 
 // when start button is clicked, a question with multiple choice appears
@@ -52,20 +52,30 @@ function fourthQuestion() {
         document.getElementById("score").style.display = "block";
     }
 }
+
+var scoreKeep = document.getElementById("score");
+
+
+    
 // declare count variable to store points
-count = 0;
+var count = 0;
 
 function correct() {
     var score = document.getElementsByClassName("correct");
     if (score) {
-        count = count + 1;
+        count = count + 3;
     }
+    // why won't no points render as 0?
+    if (score != true) {
+        count = 0;
+    }
+    console.log(count);
 
+    document.getElementById("score").innerHTML = ("Your Final Score Is " + count);
+    
 }
 
-console.log(correct);
-// when correct answer is clicked, function correct fires
-// why doesn't this work???
+
 
 
 
