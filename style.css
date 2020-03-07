@@ -41,3 +41,29 @@ ol {
 p {
     font-size: 30px;
 }
+#time {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    margin-bottom: 40px;
+}
+#demo {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+#minutes {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 80px;
+}
+
+#seconds {
+    font-size: 24px;
+    font-weight: bold;
+  
+    
+}
