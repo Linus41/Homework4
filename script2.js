@@ -23,27 +23,33 @@ function myFunction() {
     if (document.getElementById("question-one").style.display = "none") {
         document.getElementById("question-one").style.display = "block";
     }
-    // put timer here so it fires when onclick is triggered?
 
+    // timer is triggered in the start button onclick event
     timerBegin();
 }
-
+//this function counts down the timer
 function timerBegin() {
     //    use mins and secs, declared above globally
     timerInterval = setInterval(function () {
-        if(parseInt(secs) === 00) {
+        if (parseInt(secs) === 00) {
             secs = 59;
-        } 
+        }
         secs--;
         if(parseInt(mins) === 1) {
-            mins--;
-        } 
-        
-        document.getElementById("seconds").textContent = secs;
+            mins = mins -1;
+        } else if(parseInt(mins) === -0) {
+            mins = "";
+        }
         document.getElementById("minutes").textContent = mins;
+        document.getElementById("seconds").textContent = secs;
+
     }, 1000);
+
     console.log(secs, mins, "is this working", timerInterval);
+    
 }
+
+
 // why aren't the first, second, third, fourth questions void suddenly??
 // answer: because of indentation, myFunction held all functions inside of it
 // The following three functions replace current question with next question
@@ -105,7 +111,3 @@ if (score === false) {
     count = 0;
 }
 
-// this tells the innerHTML to disply the final score
-
-// fires startTimer function when startButton is clicked
-// counter.addEventListener("click", timer)
