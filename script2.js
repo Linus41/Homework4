@@ -5,6 +5,7 @@ document.getElementById("question-one").style.display = "none";
 document.getElementById("question-two").style.display = "none";
 document.getElementById("question-three").style.display = "none";
 document.getElementById("question-four").style.display = "none";
+document.getElementById("initials").style.display = "none";
 
 // tell html to keep score box hidden for now
 document.getElementById("score").style.display = "none";
@@ -32,33 +33,38 @@ function timerBegin() {
     //    use mins and secs, declared above globally
     timerInterval = setInterval(function () {
         if (parseInt(secs) === 00) {
-            secs = 59;
-        
-        
+            secs = 3; //change back to 59
+
+
         }
         secs--;
-        if(parseInt(secs) === 0) {
+        if (parseInt(secs) === 0) {
             alert("Time's up!");
-            secs = "";
             clearInterval(timerInterval);
-           
+            theEnd();
+
+
         }
-        if(parseInt(mins) === 1) {
+        if (parseInt(mins) === 1) {
             mins = "";
-            
+
         }
+    
         document.getElementById("minutes").textContent = mins;
         document.getElementById("seconds").textContent = secs;
 
     }, 1000);
 
     console.log(secs, mins, "is this working", timerInterval);
-    
+
 }
 
-
-// why aren't the first, second, third, fourth questions void suddenly??
-// answer: because of indentation, myFunction held all functions inside of it
+function theEnd() {
+    if (parseInt(secs) === 0) {
+        document.getElementById("initials").style.display = "block";
+        document.getElementById("score").style.display = "block";
+    }
+}
 // The following three functions replace current question with next question
 function firstQuestion() {
 
@@ -92,10 +98,11 @@ function fourthQuestion() {
     var quest4 = document.getElementById("question-four").innerHTML;
     if (quest4) {
         document.getElementById("question-four").style.display = "none";
-        document.getElementById("score").style.display = "block"
+
         document.getElementById("demo").innerHTML = count;
         clearInterval(timerInterval);
     }
+    theEnd();
 }
 
 
@@ -114,7 +121,7 @@ function correct() {
 }
 
 // why won't no points render as 0?
-if (score === false) {
-    count = 0;
-}
+// if (score === false) {
+//     count = 0;
+// }
 
