@@ -33,12 +33,19 @@ function timerBegin() {
     timerInterval = setInterval(function () {
         if (parseInt(secs) === 00) {
             secs = 59;
+        
+        
         }
         secs--;
+        if(parseInt(secs) === 0) {
+            alert("Time's up!");
+            secs = "";
+            clearInterval(timerInterval);
+           
+        }
         if(parseInt(mins) === 1) {
-            mins = mins -1;
-        } else if(parseInt(mins) === -0) {
             mins = "";
+            
         }
         document.getElementById("minutes").textContent = mins;
         document.getElementById("seconds").textContent = secs;
