@@ -13,10 +13,10 @@ document.getElementById("score").style.display = "none";
 var mins = document.getElementById("minutes").textContent;
 var secs = document.getElementById("seconds").textContent;
 var timerInterval;
+
 // score
 var count = 0;
 var initials; 
-
 
 // when start button is clicked, a question with multiple choice appears and timer begins
 function myFunction() {
@@ -30,7 +30,6 @@ function myFunction() {
 }
 //this function counts down the timer
 function timerBegin() {
-    //    use mins and secs, declared above globally
     timerInterval = setInterval(function () {
         if (parseInt(secs) === 00) {
             secs = 59; 
@@ -62,7 +61,7 @@ function theEnd() {
         clearInterval(timerInterval);
 
     }
-    // return initials;
+   
 }
 // The following three functions replace current question with next question
 function firstQuestion() {
@@ -123,7 +122,7 @@ function correct() {
 }
 
 //how do I store the final score (var count) and initials in local storage?
-
+// this is my attempt:
 window.localStorage.setItem(JSON.stringify(count), "");
 window.localStorage.setItem(initials, "");
 console.log(initials);
