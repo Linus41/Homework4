@@ -5,7 +5,6 @@ document.getElementById("question-one").style.display = "none";
 document.getElementById("question-two").style.display = "none";
 document.getElementById("question-three").style.display = "none";
 document.getElementById("question-four").style.display = "none";
-document.getElementById("initials").style.display = "none";
 
 // tell html to keep score box hidden for now
 document.getElementById("score").style.display = "none";
@@ -16,9 +15,10 @@ var secs = document.getElementById("seconds").textContent;
 var timerInterval;
 // score
 var count = 0;
+var initials; 
 
 
-// when start button is clicked, a question with multiple choice appears
+// when start button is clicked, a question with multiple choice appears and timer begins
 function myFunction() {
 
     if (document.getElementById("question-one").style.display = "none") {
@@ -34,36 +34,36 @@ function timerBegin() {
     timerInterval = setInterval(function () {
         if (parseInt(secs) === 00) {
             secs = 3; //change back to 59
-
-
         }
         secs--;
         if (parseInt(secs) === 0) {
             alert("Time's up!");
             clearInterval(timerInterval);
             theEnd();
-
-
         }
         if (parseInt(mins) === 1) {
             mins = "";
-
         }
-    
+
         document.getElementById("minutes").textContent = mins;
         document.getElementById("seconds").textContent = secs;
-
     }, 1000);
 
-    console.log(secs, mins, "is this working", timerInterval);
+
 
 }
-
+// this function makes the score box appear and a prompt for initials appear
 function theEnd() {
     if (parseInt(secs) === 0) {
-        document.getElementById("initials").style.display = "block";
+       
         document.getElementById("score").style.display = "block";
+        var initials = prompt("please type in your initials");
+        console.log(initials);
+        document.getElementById("demo").innerHTML = count;
+        clearInterval(timerInterval);
+
     }
+    // return initials;
 }
 // The following three functions replace current question with next question
 function firstQuestion() {
@@ -99,16 +99,14 @@ function fourthQuestion() {
     if (quest4) {
         document.getElementById("question-four").style.display = "none";
 
-        document.getElementById("demo").innerHTML = count;
-        clearInterval(timerInterval);
+        
     }
     theEnd();
 }
 
 
 
-//   //Do code for showing the number of seconds here
-// }
+
 
 // this function counts and stores how many times correct answers were chosen 
 function correct() {
@@ -120,8 +118,8 @@ function correct() {
     console.log(count);
 }
 
-// why won't no points render as 0?
-// if (score === false) {
-//     count = 0;
-// }
+//how do I store the final score (var count) and initials in local storage?
 
+window.localStorage.setItem(JSON.stringify(count), "");
+window.localStorage.setItem(initials, "");
+console.log(initials);
