@@ -1,42 +1,11 @@
-# 04 Web APIs: Code Quiz
+Homework #4
 
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+For this project, I made a timed quiz. When the start button is clicked, the one-minute timer begins and simultaneously the first question appears. When that question is answered, the second question replaces it, and so forth for a total of four questions. As questions are answered, a score div is keeping track of points in the background. When the timer is up, the quiz is over and a prompt fires saying "Time's Up!", then a second prompt fires asking the user for their initials. If the user answers all the questions before the timer is up, a prompt fires asking for initials. At the end of the quiz a score box also appears showing the score, 3 points for every correct answer.
 
-## User Story
+Problems: 
 
-```
-AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+I can get the timer to stop when all questions are answered, but not reset to zero (which would trigger function "theEnd" to fire prompts
 
-## Acceptance Criteria
+I don't know how to save the initials or score to the local storage, despite all my efforts
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
-```
-
-The following animation demonstrates the application functionality:
-
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
-
-### Review
-
-You are required to submit the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+The questions are still my placeholder questions, sorry

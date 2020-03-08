@@ -33,7 +33,7 @@ function timerBegin() {
     //    use mins and secs, declared above globally
     timerInterval = setInterval(function () {
         if (parseInt(secs) === 00) {
-            secs = 3; //change back to 59
+            secs = 59; 
         }
         secs--;
         if (parseInt(secs) === 0) {
@@ -57,8 +57,7 @@ function theEnd() {
     if (parseInt(secs) === 0) {
        
         document.getElementById("score").style.display = "block";
-        var initials = prompt("please type in your initials");
-        console.log(initials);
+
         document.getElementById("demo").innerHTML = count;
         clearInterval(timerInterval);
 
@@ -97,9 +96,14 @@ function thirdQuestion() {
 function fourthQuestion() {
     var quest4 = document.getElementById("question-four").innerHTML;
     if (quest4) {
-        document.getElementById("question-four").style.display = "none";
-
+        document.getElementById("question-four").style.display = "none";   
+    }
+    if (secs !== 0) {
+        clearInterval(timerInterval);
         
+    }
+    if (timerInterval) {
+        secs === 0;
     }
     theEnd();
 }
