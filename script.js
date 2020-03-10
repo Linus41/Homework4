@@ -16,7 +16,7 @@ var timerInterval;
 
 // score
 var count = 0;
-var initials; 
+var initials;
 
 // when start button is clicked, a question with multiple choice appears and timer begins
 function myFunction() {
@@ -28,18 +28,17 @@ function myFunction() {
     // timer is triggered in the start button onclick event
     timerBegin();
 }
-//this function counts down the timer
+var timerInterval;
+//when called, this function starts the countdown timer
 function timerBegin() {
+
     timerInterval = setInterval(function () {
+
         if (parseInt(secs) === 00) {
-            secs = 59; 
+            secs = 59;
         }
         secs--;
-        if (parseInt(secs) === 0) {
-            alert("Time's up!");
-            clearInterval(timerInterval);
-            theEnd();
-        }
+
         if (parseInt(mins) === 1) {
             mins = "";
         }
@@ -50,18 +49,24 @@ function timerBegin() {
 
 
 
+
+}
+function myStopFunction() {
+    clearTimeout(timerInterval);
 }
 // this function makes the score box appear and a prompt for initials appear
 function theEnd() {
     if (parseInt(secs) === 0) {
-       
         document.getElementById("score").style.display = "block";
-
         document.getElementById("demo").innerHTML = count;
-        clearInterval(timerInterval);
 
     }
-   
+
+    if (parseInt(secs) > 0) {
+        // clearInterval(timerInterval);
+        secs === 0;
+    }
+    myStopFunction();
 }
 // The following three functions replace current question with next question
 function firstQuestion() {
@@ -72,6 +77,7 @@ function firstQuestion() {
         document.getElementById("question-one").style.display = "none";
         document.getElementById("question-two").style.display = "block";
     }
+
 }
 
 function secondQuestion() {
@@ -91,19 +97,27 @@ function thirdQuestion() {
         document.getElementById("question-four").style.display = "block";
     }
 }
+var initials;
 // This function changes the from fourth question to score element
 function fourthQuestion() {
     var quest4 = document.getElementById("question-four").innerHTML;
     if (quest4) {
-        document.getElementById("question-four").style.display = "none";   
+        document.getElementById("question-four").style.display = "none";
     }
-    if (secs !== 0) {
-        clearInterval(timerInterval);
-        
+    if (parseInt(secs) > 0) {
+        clearTimeout(timerInterval);
     }
-    if (timerInterval) {
-        secs === 0;
-    }
+
+    initials = prompt("The end! Please enter your initials");
+    document.getElementById("score").style.display = "block";
+    document.getElementById("demo").innerHTML = count;
+    
+    localStorage.setItem(initials, "");
+    localStorage.setItem(JSON.stringify(count), "");
+    console.log(localStorage);
+
+
+
     theEnd();
 }
 
@@ -121,8 +135,3 @@ function correct() {
     console.log(count);
 }
 
-//how do I store the final score (var count) and initials in local storage?
-// this is my attempt:
-window.localStorage.setItem(JSON.stringify(count), "");
-window.localStorage.setItem(initials, "");
-console.log(initials);
